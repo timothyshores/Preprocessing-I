@@ -56,7 +56,7 @@ table {
 html, body {
 	height: 100%;
 	font-size: 62.5%;
-	background: @background-color;
+	background: none;
 }
 
 .container {
@@ -66,10 +66,18 @@ html, body {
 
 // Variables
 @background-color: lighten(black, 95%);
+@font: Helvetica, Tahoma, Arial, Verdana, ;
 
 // Mixins
 .flex(@justify, @align) {
 	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+.flex-column(@justify, @align) {
+	display: flex;
+	flex-direction: column;
 	justify-content: @justify;
 	align-items: @align;
 }
@@ -85,12 +93,47 @@ html, body {
 	}
 }
 
+.mp10 {
+	margin: 10px;
+	padding: 10px;
+}
+
+.center-text {
+	text-align: center;
+}
+
+// Development use only
+.select {
+	border: 1px solid red;
+}
+
 // Resume Page Styles
 
 nav ul {
 	.flex(space-between, baseline);
 	.navbar;
 }
+
+.top-content {
+	.flex-column(space-between, center);
+	background: @background-color;
+	h1 {
+		font-size: 2.25rem;
+		font-weight: 600;
+		font-family: @font;
+		.mp10;
+	}
+	p {
+		font-size: 1.6rem;
+		.mp10;
+		.center-text
+	}
+	button {
+		.mp10
+	}
+}
+	
+
 .work-experience {
 	/* Variables
 	================================== */
