@@ -134,3 +134,98 @@ html,
 body {
   height: 100%;
 }
+.work-experience {
+  /* Variables
+	================================== */
+  /* Tables
+	================================== */
+  /* Table column sizing
+	================================== */
+  /* Page styling
+	================================== */
+}
+.work-experience .Rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+}
+.work-experience .Rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border: solid 3px white;
+  background: rgba(112, 128, 144, 0.2);
+}
+.work-experience .Rtable-cell > h1,
+.work-experience .Rtable-cell > h2,
+.work-experience .Rtable-cell > h3,
+.work-experience .Rtable-cell > h4,
+.work-experience .Rtable-cell > h5,
+.work-experience .Rtable-cell > h6 {
+  margin: 0;
+}
+.work-experience .Rtable--2cols > .Rtable-cell {
+  width: 50%;
+}
+.work-experience .Rtable--3cols > .Rtable-cell {
+  width: 33.33%;
+}
+.work-experience .Rtable--4cols > .Rtable-cell {
+  width: 25%;
+}
+.work-experience .Rtable--5cols > .Rtable-cell {
+  width: 20%;
+}
+.work-experience .Rtable--6cols > .Rtable-cell {
+  width: 16.6%;
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url(https://fonts.gstatic.com/s/josefinsans/v12/Qw3aZQNVED7rKGKxtqIqX5EUDXx9.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Josefin Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v12/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
+}
+.work-experience html {
+  height: 100%;
+  background-color: #EEE;
+}
+.work-experience body {
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 800px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2em;
+  background-color: white;
+  border: double 3px #DDD;
+  border-top: none;
+  border-bottom: none;
+}
+.work-experience h1,
+.work-experience h2,
+.work-experience h3,
+.work-experience h4,
+.work-experience h5,
+.work-experience h6 {
+  margin-top: 0;
+}
+.work-experience h3 {
+  font-size: 1.2em;
+}
+.work-experience h4 {
+  font-size: 1em;
+}
+.work-experience strong {
+  color: #434d57;
+}
