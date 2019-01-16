@@ -48,17 +48,50 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+// General Styles
 * {
     box-sizing: border-box;
 }
 
 html, body {
 	height: 100%;
+	font-size: 62.5%;
+	background: @background-color;
 }
 
-.work-experience {
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
 
+// Variables
+@background-color: lighten(black, 95%);
+
+// Mixins
+.flex(@justify, @align) {
+	display: flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+.navbar {
+	li {
+		margin: 20px;
+	}
+	li a {
+		text-decoration: none;
+		color: black;
+		font-size: 2rem;
+	}
+}
+
+// Resume Page Styles
+
+nav ul {
+	.flex(space-between, baseline);
+	.navbar;
+}
+.work-experience {
 	/* Variables
 	================================== */
 	@bw: 3px;  // border width
