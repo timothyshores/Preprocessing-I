@@ -139,13 +139,28 @@ body {
   max-width: 800px;
   margin: 0 auto;
 }
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+  }
+}
 .navbar li {
   margin: 20px;
+}
+@media (max-width: 800px) {
+  .navbar li {
+    margin: 5px;
+  }
 }
 .navbar li a {
   text-decoration: none;
   color: black;
   font-size: 2rem;
+}
+@media (max-width: 800px) {
+  .navbar {
+    width: 100%;
+  }
 }
 .mp10 {
   margin: 10px;
@@ -153,6 +168,9 @@ body {
 }
 .center-text {
   text-align: center;
+}
+.border-black {
+  border: 1px solid black;
 }
 .select {
   border: 1px solid red;
@@ -165,10 +183,32 @@ nav ul {
 nav ul li {
   margin: 20px;
 }
+@media (max-width: 800px) {
+  nav ul li {
+    margin: 5px;
+  }
+}
 nav ul li a {
   text-decoration: none;
   color: black;
   font-size: 2rem;
+}
+@media (max-width: 800px) {
+  nav ul {
+    width: 100%;
+  }
+}
+nav ul a {
+  display: inline-block;
+  padding: 5px 50px;
+  background: rgba(242, 242, 242, 0.25);
+  border-radius: 10%;
+  margin: 0;
+}
+@media (max-width: 800px) {
+  nav ul a {
+    padding: 5px 25px;
+  }
 }
 .top-content {
   display: flex;
@@ -176,6 +216,13 @@ nav ul li a {
   justify-content: space-between;
   align-items: center;
   background: #f2f2f2;
+  margin: 10px;
+  padding: 10px;
+}
+.top-content img {
+  border-radius: 20%;
+  margin: 10px;
+  padding: 10px;
 }
 .top-content h1 {
   font-size: 2.25rem;
@@ -194,9 +241,74 @@ nav ul li a {
   margin: 10px;
   padding: 10px;
 }
+.middle-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.middle-content h2 {
+  font-size: 2rem;
+  padding-bottom: 15px;
+  font-weight: 600;
+}
+.middle-content p {
+  font-size: 1.6rem;
+}
+.middle-content .left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+  line-height: 2;
+}
+.middle-content .right-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+}
+.middle-content li {
+  font-size: 1.6rem;
+  border: 1px solid black;
+  padding: 10px;
+}
+.middle-content li + li {
+  border-top: 0;
+}
+@media (max-width: 500px) {
+  .middle-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .middle-content .left-column {
+    width: 90vw;
+  }
+  .middle-content .right-column {
+    width: 90vw;
+  }
+  .middle-content .right-column ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+  .middle-content .right-column li {
+    border: none;
+  }
+}
 .work-experience {
   /* Variables
 	================================== */
+  font-size: 1.6rem;
   /* Tables
 	================================== */
   /* Table column sizing
@@ -209,6 +321,7 @@ nav ul li a {
   flex-wrap: wrap;
   margin: 0 0 3em 0;
   padding: 0;
+  text-align: center;
 }
 .work-experience .Rtable-cell {
   box-sizing: border-box;
@@ -218,7 +331,8 @@ nav ul li a {
   overflow: hidden;
   list-style: none;
   border: solid 3px white;
-  background: rgba(112, 128, 144, 0.2);
+  background: rgba(242, 242, 242, 0.75);
+  text-align: center;
 }
 .work-experience .Rtable-cell > h1,
 .work-experience .Rtable-cell > h2,
@@ -243,20 +357,7 @@ nav ul li a {
 .work-experience .Rtable--6cols > .Rtable-cell {
   width: 16.6%;
 }
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Josefin Sans Regular'), local('JosefinSans-Regular'), url(https://fonts.gstatic.com/s/josefinsans/v12/Qw3aZQNVED7rKGKxtqIqX5EUDXx9.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Josefin Sans Bold'), local('JosefinSans-Bold'), url(https://fonts.gstatic.com/s/josefinsans/v12/Qw3FZQNVED7rKGKxtqIqX5Ectllte10k.ttf) format('truetype');
-}
 .work-experience html {
-  height: 100%;
   background-color: #EEE;
 }
 .work-experience body {
@@ -282,10 +383,26 @@ nav ul li a {
 }
 .work-experience h3 {
   font-size: 1.2em;
+  font-weight: 700;
 }
 .work-experience h4 {
   font-size: 1em;
 }
 .work-experience strong {
   color: #434d57;
+}
+.work-experience h2 {
+  font-size: 2rem;
+  padding-bottom: 15px;
+  font-weight: 600;
+  margin: 2.5rem 1rem 2.5rem;
+}
+footer p {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background: rgba(242, 242, 242, 0.5);
+  max-width: 800px;
+  margin: 0 auto;
 }
