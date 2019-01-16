@@ -158,6 +158,10 @@ nav ul {
 	button {
 		.mp10
 	}
+	button a {
+		color: black;
+		text-decoration: none;
+	}
 	.mp10;
 }
 
@@ -195,11 +199,18 @@ nav ul {
 		.left-column {
 			width: 90vw; 
 		}
+		.left-column h2 {
+			text-decoration: underline;
+		}
 		.right-column {
 			width: 90vw;
 		} 
+
+		.right-column h2 {
+			text-decoration: underline;
+		}
 		.right-column ul {
-			.flex(flex-start, center);
+			.flex(space-evenly, center);
 			flex-wrap: wrap;
 			width: 80%;
 		}
@@ -271,6 +282,13 @@ nav ul {
 		padding-bottom: 15px;
 		font-weight: 600;
 		margin: 2.5rem 1rem 2.5rem;
+		.center-text;
+	}
+	@media (max-width: 500px)  {
+		h2 {
+			
+			border-bottom: 1px solid black;
+		}
 	}
 }
 

@@ -241,6 +241,10 @@ nav ul a {
   margin: 10px;
   padding: 10px;
 }
+.top-content button a {
+  color: black;
+  text-decoration: none;
+}
 .middle-content {
   display: flex;
   justify-content: space-between;
@@ -291,12 +295,18 @@ nav ul a {
   .middle-content .left-column {
     width: 90vw;
   }
+  .middle-content .left-column h2 {
+    text-decoration: underline;
+  }
   .middle-content .right-column {
     width: 90vw;
   }
+  .middle-content .right-column h2 {
+    text-decoration: underline;
+  }
   .middle-content .right-column ul {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     width: 80%;
@@ -396,6 +406,12 @@ nav ul a {
   padding-bottom: 15px;
   font-weight: 600;
   margin: 2.5rem 1rem 2.5rem;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .work-experience h2 {
+    border-bottom: 1px solid black;
+  }
 }
 footer p {
   font-size: 1.6rem;
